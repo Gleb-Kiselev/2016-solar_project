@@ -31,7 +31,6 @@ def move_space_object(body, dt):
     **body** — тело, которое нужно переместить.
     **dt** — шаг по времени
     """
-
     ax = body.Fx / body.m
     ay = body.Fy / body.m
     body.x += body.Vx * dt  # DONE // FIXME: не понимаю как менять...

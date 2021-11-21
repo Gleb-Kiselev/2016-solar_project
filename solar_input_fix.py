@@ -50,13 +50,13 @@ def parse_star_parameters(line, star):
 
     r, color, m, x, y, Vx, Vy = line.split()[1], str(line.split()[2]), line.split()[3], \
                                 line.split()[4], line.split()[5], line.split()[6], line.split()[7]
-    star.r(r)
-    star.c(color)
-    star.m(m)
-    star.x(x)
-    star.y(y)
-    star.Vx(Vx)
-    star.Vy(Vy)
+    star.r = r
+    star.c = color
+    star.m = m
+    star.x = x
+    star.y = y
+    star.Vx = Vx
+    star.Vy = Vy
 
     # DONE // FIXME: not done yet...
 
@@ -78,13 +78,13 @@ def parse_planet_parameters(line, planet):
 
     r, color, m, x, y, Vx, Vy = line.split()[1], str(line.split()[2]), line.split()[3], \
                                 line.split()[4], line.split()[5], line.split()[6], line.split()[7]
-    planet.r(r)
-    planet.c(color)
-    planet.m(m)
-    planet.x(x)
-    planet.y(y)
-    planet.Vx(Vx)
-    planet.Vy(Vy)
+    planet.r = r
+    planet.c = color
+    planet.m = m
+    planet.x = x
+    planet.y = y
+    planet.Vx = Vx
+    planet.Vy = Vy
 
     # DONE // FIXME: not done yet...
 
