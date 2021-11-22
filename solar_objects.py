@@ -32,10 +32,10 @@ class Star:
     Fy = 0
     """Сила по оси **y**"""
 
-    R = 5
+    r = 5
     """Радиус звезды"""
 
-    color = "red"
+    c = "red"
     """Цвет звезды"""
 
     image = None
@@ -72,10 +72,10 @@ class Planet:
     Fy = 0
     """Сила по оси **y**"""
 
-    R = 5
+    r = 5
     """Радиус планеты"""
 
-    color = "green"
+    c = "green"
     """Цвет планеты"""
 
     image = None

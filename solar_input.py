@@ -48,8 +48,8 @@ def parse_star_parameters(line, star):
     **star** — объект звезды.
     """
 
-    r, color, m, x, y, Vx, Vy = line.split()[1], str(line.split()[2]), line.split()[3], \
-                                line.split()[4], line.split()[5], line.split()[6], line.split()[7]
+    r, color, m, x, y, Vx, Vy = float(line.split()[1]), str(line.split()[2]), float(line.split()[3]), \
+                                float(line.split()[4]), float(line.split()[5]), float(line.split()[6]), float(line.split()[7])
     star.r = r
     star.c = color
     star.m = m
@@ -72,12 +72,12 @@ def parse_planet_parameters(line, planet):
 
     Параметры:
 
-    **line** — строка с описание планеты.
+    **line** — строка с описанием планеты.
     **planet** — объект планеты.
     """
 
-    r, color, m, x, y, Vx, Vy = line.split()[1], str(line.split()[2]), line.split()[3], \
-                                line.split()[4], line.split()[5], line.split()[6], line.split()[7]
+    r, color, m, x, y, Vx, Vy = float(line.split()[1]), str(line.split()[2]), float(line.split()[3]), \
+                                float(line.split()[4]), float(line.split()[5]), float(line.split()[6]), float(line.split()[7])
     planet.r = r
     planet.c = color
     planet.m = m
@@ -101,23 +101,23 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     **space_objects** — список объектов планет и звёзд
     """
     with open(output_filename, 'w') as out_file:
-        line = []
         for obj in space_objects:
+            line = []
             print(out_file, "%s %d %s %f" % ('1', 2, '3', 4.5))
             if obj.type == "star":
                 line.append("Star")
             elif obj.type == "planet":
                 line.append("Planet")
-            line.append(obj.r)
-            line.append(obj.color)
-            line.append(obj.m)
-            line.append(obj.x)
-            line.append(obj.y)
-            line.append(obj.Vx)
-            line.append(obj.Vy)
+            line.append(str(obj.r))
+            line.append(obj.c)
+            line.append(str(obj.m))
+            line.append(str(obj.x))
+            line.append(str(obj.y))
+            line.append(str(obj.Vx))
+            line.append(str(obj.Vy))
             out_file.write(
                 line[0] + " " + line[1] + " " + line[2] + " " + line[3] + " " + line[4] + " "
-                + line[5] + " " + line[6] + " " + line[7] + "\n"
+                + line[4] + " " + line[5] + " " + line[6] + " " + line[7] + "\n"
             )
             # DONE // FIXME: should store real values
 

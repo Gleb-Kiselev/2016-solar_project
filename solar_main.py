@@ -20,7 +20,7 @@ displayed_time = None
 
 time_step = None
 """Шаг по времени при моделировании.
-Тип: float"""
+Тип: переменная tkinter"""
 
 space_objects = []
 """Список космических объектов."""
@@ -58,7 +58,7 @@ def start_execution():
 
 
 def stop_execution():
-    """Обработчик события нажатия на кнопку Start.
+    """Обработчик события нажатия на кнопку Pause.
     Останавливает циклическое исполнение функции execution.
     """
     global perform_execution
